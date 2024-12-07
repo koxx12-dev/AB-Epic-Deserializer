@@ -1,19 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <!-- <TargetFramework>netcoreapp3.1</TargetFramework> -->
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>ABEpicBalancingDataContainerDecoder</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <PublishAot>true</PublishAot>
-    <InvariantGlobalization>true</InvariantGlobalization>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>ABEpicBalancingDataContainerDecoder</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <InvariantGlobalization>true</InvariantGlobalization>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="protobuf-net" Version="3.2.30" />
-  </ItemGroup>
-
+    <ItemGroup>
+        <PackageReference Include="Costura.Fody" Version="6.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="protobuf-net" Version="3.2.30"/>
+        <PackageReference Include="Sharprompt" Version="3.0.0-preview5" />
+    </ItemGroup>
 </Project>
